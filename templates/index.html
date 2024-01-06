@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ガチャシミレーター</title>
+</head>
+<body>
+    <h1>ガチャシミレーター</h1>
+    <form method="post">
+        <input type="submit" name="pull_once" value="一回引く">
+        <input type="submit" name="pull_ten_times" value="十回引く">
+        <input type="submit" name="reset" value="リセット">
+    </form>
+    {% if result %}
+        <p>結果: {{ result }}</p>
+    {% endif %}
+</body>
+</html>
