@@ -52,7 +52,6 @@ while True:
     print("2: ガチャを十回引く")
     print("3: ステータスを表示")
     print("4: リセット")
-    print("5: 終了")
     choice = input("選択してください: ")
     if choice == "1":
         pull_gacha(1)
@@ -62,5 +61,3 @@ while True:
         print_status()
     elif choice == "4":
         reset()
-    elif choice == "5":
-        break
