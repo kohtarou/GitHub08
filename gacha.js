@@ -35,15 +35,15 @@ function drawTen() {
 }
 
 function displayResults() {
-    let resultsString = "";
+    let resultsHTML = "";
     for (let i = 0; i < results.length; i++) {
         if (results[i] === "---") {
-            resultsString += "<br>";  // 仕切りを検出したら改行を追加
+            resultsHTML += "<div style='width: 100%;'></div>";  // 仕切りを検出したら全幅の空のdivを追加
         } else {
-            resultsString += results[i] + "<br>";
+            resultsHTML += "<div style='margin: 5px;'>" + results[i] + "</div>";  // 結果をdivで囲み、マージンを追加
         }
     }
-    document.getElementById("results").innerHTML = "結果: <br>" + results.join("<br>");
+    document.getElementById("results").innerHTML = resultsHTML;
     document.getElementById("totalDraws").innerHTML = "合計回数: " + totalDraws;
     document.getElementById("totalDiamonds").innerHTML = "合計ダイヤ: " + totalDiamonds;
 }
