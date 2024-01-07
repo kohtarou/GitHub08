@@ -3,30 +3,33 @@
 <head>
     <title>Gacha Simulator</title>
     <style>
-        body {
+        .container {
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
         }
 
-        button {
-            margin: 5px;
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-    <button onclick="一回引く()">一回引く</button>
-    <button onclick="十回引く()">十回引く</button>
-    <button onclick="リセット()">リセット</button>
+    <div class="container">
+        <div class="button-group">
+            <button onclick="一回引く()">一回引く</button>
+            <button onclick="十回引く()">十回引く</button>
+            <button onclick="リセット()">リセット</button>
+        </div>
 
-    <div id="results"></div>
-    <div id="totalDraws"></div>
-    <div id="totalDiamonds"></div>
-</body>
+        <div id="results"></div>
+        <div id="totalDraws"></div>
+        <div id="totalDiamonds"></div>
+    </div>
 <script src="gacha.js"></script>
+</body>
 </html>
