@@ -21,17 +21,28 @@ function drawOne() {
     displayResults();
 }
 
+
+
 function drawTen() {
     for (let i = 0; i < 10; i++) {
         let result = draw();
         results.push(result);
     }
+    results.push("---");  // 仕切りを追加
     totalDraws += 10;
     totalDiamonds += 50;
     displayResults();
 }
 
 function displayResults() {
+    let resultsString = "";
+    for (let i = 0; i < results.length; i++) {
+        if (results[i] === "---") {
+            resultsString += "<br>";  // 仕切りを検出したら改行を追加
+        } else {
+            resultsString += results[i] + "<br>";
+        }
+    }
     document.getElementById("results").innerHTML = "結果: <br>" + results.join("<br>");
     document.getElementById("totalDraws").innerHTML = "合計回数: " + totalDraws;
     document.getElementById("totalDiamonds").innerHTML = "合計ダイヤ: " + totalDiamonds;
