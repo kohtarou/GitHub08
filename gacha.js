@@ -38,9 +38,9 @@ function displayResults() {
     let resultsHTML = "";
     for (let i = 0; i < results.length; i++) {
         if (results[i] === "---") {
-            resultsHTML += "<div style='width: 100%;'></div>";  // 仕切りを検出したら全幅の空のdivを追加
+            resultsHTML += "<hr>";  // 仕切りを追加
         } else {
-            resultsHTML += "<div style='margin: 5px; display: inline-block;'>" + results[i] + "</div>";  // 結果をdivで囲み、マージンを追加
+            resultsHTML += "<span style='margin: 5px;'>" + results[i] + "</span>";  // 結果をspanで囲み、マージンを追加
         }
     }
     document.getElementById("results").innerHTML = resultsHTML;
