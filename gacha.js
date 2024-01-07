@@ -40,7 +40,7 @@ function displayResults() {
         if (results[i] === "---") {
             resultsHTML += "<div style='width: 100%;'></div>";  // 仕切りを検出したら全幅の空のdivを追加
         } else {
-            resultsHTML += "<div style='margin: 5px;'>" + results[i] + "</div>";  // 結果をdivで囲み、マージンを追加
+            resultsHTML += "<div style='margin: 5px; display: inline-block;'>" + results[i] + "</div>";  // 結果をdivで囲み、マージンを追加
         }
     }
     document.getElementById("results").innerHTML = resultsHTML;
