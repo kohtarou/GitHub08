@@ -43,7 +43,7 @@ function displayResults() {
             resultsHTML += "<span style='margin: 5px;'>" + results[i] + "</span>";  // 結果をspanで囲み、マージンを追加
         }
     }
-    document.getElementById("results").innerHTML = resultsHTML;
+    document.getElementById("results").innerHTML = "結果: <br>" + resultsHTML;
     document.getElementById("totalDraws").innerHTML = "合計回数: " + totalDraws;
     document.getElementById("totalDiamonds").innerHTML = "合計ダイヤ: " + totalDiamonds;
 }
