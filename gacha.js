@@ -40,7 +40,7 @@ function displayResults() {
         if (results[i] === "---") {
             resultsHTML += "<hr>";  // 仕切りを追加
         } else {
-            resultsHTML += "<span style='margin: 5px;'>" + results[i] + "</span>";  // 結果をspanで囲み、マージンを追加
+            resultsHTML += "<span style='margin: 5px;'>" + results[i] + "</span> &nbsp;";  // 結果をspanで囲み、マージンを追加
         }
     }
     document.getElementById("results").innerHTML = "結果: <br>" + resultsHTML;
