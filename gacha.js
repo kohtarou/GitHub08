@@ -5,11 +5,11 @@ let results = [];
 function draw() {
     let rand = Math.random() * 100;
     if (rand < 7.0) {
-        return "Star 4";
+        return "星4";
     } else if (rand < 42.0) {
-        return "Star 3";
+        return "星3";
     } else {
-        return "Star 2";
+        return "星2";
     }
 }
 
@@ -32,9 +32,9 @@ function drawTen() {
 }
 
 function displayResults() {
-    document.getElementById("results").innerHTML = "Results: " + results.join(", ");
-    document.getElementById("totalDraws").innerHTML = "Total Draws: " + totalDraws;
-    document.getElementById("totalDiamonds").innerHTML = "Total Diamonds: " + totalDiamonds;
+    document.getElementById("results").innerHTML = "結果: <br>" + results.join("<br>");
+    document.getElementById("totalDraws").innerHTML = "合計回数: " + totalDraws;
+    document.getElementById("totalDiamonds").innerHTML = "合計ダイヤ: " + totalDiamonds;
 }
 
 function reset() {
