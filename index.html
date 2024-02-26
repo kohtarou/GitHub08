@@ -6,6 +6,17 @@
         #results {
             display: flex;
             flex-wrap: wrap;
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        #totalDraws, #totalDiamonds {
+            background-color: #d0d0d0;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        button {
+            margin: 5px;
         }
     </style>
 </head>
@@ -14,8 +25,11 @@
     <button onclick="drawTen()">十回引く</button>
     <button onclick="reset()">リセット</button>
 
+    <h2>結果:</h2>
     <div id="results"></div>
+    <h2>合計回数:</h2>
     <div id="totalDraws"></div>
+    <h2>合計ダイヤ:</h2>
     <div id="totalDiamonds"></div>
 </body>
 <script src="gacha.js"></script>
